@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gauge="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorPrimary"
+    tools:context=".Fragment.FireAlarm">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">   <TextView
+        android:textColor="#FF0000"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fire Limit:"
+        />
+
+<TextView
+    android:textColor="#FF0000"
+    android:id="@+id/firelimit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="100"
+    />
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="145dp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_gravity="center"
+                android:id="@+id/rconstraintLayout"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/input"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <!-- ProgressBar that represents a total of 100% -->
+                <ImageView
+
+                    android:id="@+id/alertr"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/fire"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                     />
+
+                <!-- ProgressBar that represents a chart slice, where "android:progress" is the % value of the slice -->
+                <ImageView
+                    android:id="@+id/r"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/noparking"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="R-Phase"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <com.cardiomood.android.controls.gauge.SpeedometerGauge
+                android:id="@+id/rphase"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="12dp"
+
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_gravity="center"
+                android:id="@+id/yconstraintLayout"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/input"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <!-- ProgressBar that represents a total of 100% -->
+                <ImageView
+
+                    android:id="@+id/alerty"
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/fire"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                     />
+
+                <!-- ProgressBar that represents a chart slice, where "android:progress" is the % value of the slice -->
+                <ImageView
+                    android:id="@+id/y"
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+
+                    android:src="@drawable/noparking"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Y-Phase"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <com.cardiomood.android.controls.gauge.SpeedometerGauge
+                android:id="@+id/yphase"
+                android:layout_width="130dp"
+                android:layout_height="150dp" android:layout_margin="12dp"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/bconstraintLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/input"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <!-- ProgressBar that represents a total of 100% -->
+                <ImageView
+
+                    android:id="@+id/alertb"
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/fire"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- ProgressBar that represents a chart slice, where "android:progress" is the % value of the slice -->
+                <ImageView
+                    android:id="@+id/b"
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+
+                    android:src="@drawable/noparking"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="B-Phase"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+            <com.cardiomood.android.controls.gauge.SpeedometerGauge
+                android:id="@+id/bphase"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="12dp"
+
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <ScrollView
+
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dip"
+            android:fillViewport="true"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbars="horizontal|vertical">
+
+            <HorizontalScrollView
+
+                android:id="@+id/horizontalView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:scrollbars="horizontal|vertical">
+
+                <TableLayout
+                    android:gravity="bottom"
+                    android:id="@+id/tlGridTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape">
+
+                        <TextView
+                            android:padding="5dp"
+                            android:text="PHASE"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:padding="5dp"
+                            android:text="LOCATION"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:padding="5dp"
+                            android:text="PRESENT VALUE"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:padding="5dp"
+                            android:text="AVG VALUE"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+
+                        <TextView
+
+                            android:padding="5dp"
+                            android:text="MAX VALUE"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:padding="5dp"
+                            android:text="FIRE ALARM"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:padding="5dp"
+                            android:text="LAST ALARM"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#fff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/r_r_phase"
+                            android:padding="5dp"
+                            android:text="R-Phase" />
+
+                        <TextView
+                            android:id="@+id/r_r_location"
+                            android:padding="5dp"
+                            android:text="Name As Given" />
+
+                        <TextView
+                            android:id="@+id/r_r_present_value"
+                            android:padding="5dp"
+                            android:text="5.00" />
+
+                        <TextView
+                            android:id="@+id/r_r_avg_value"
+                            android:padding="5dp"
+                            android:text="135.0" />
+
+                        <TextView
+                            android:id="@+id/r_r_max_value"
+                            android:padding="5dp"
+                            android:text="142.0" />
+
+                        <TextView
+                            android:id="@+id/r_r_fire_alarm"
+                            android:padding="5dp"
+                            android:text="280" />
+                        <TextView
+                            android:id="@+id/r_r_last_alarm"
+                            android:padding="5dp"
+                            android:text="10/1/19 @ 10:12 AM" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#fff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/r_y_phase"
+                            android:padding="5dp"
+                            android:text="Y-Phase" />
+
+                        <TextView
+
+                            android:id="@+id/r_y_location"
+                            android:padding="5dp"
+                            android:text="Name As Given" />
+
+                        <TextView
+                            android:id="@+id/r_y_present_value"
+                            android:padding="5dp"
+                            android:text="12.0" />
+
+                        <TextView
+                            android:id="@+id/r_y_avg_value"
+                            android:padding="5dp"
+                            android:text="147.8" />
+
+                        <TextView
+                            android:id="@+id/r_y_max_value"
+                            android:padding="5dp"
+                            android:text="195.0"
+                            />
+
+                        <TextView
+                            android:id="@+id/r_y_fire_alarm"
+                            android:padding="5dp"
+                            android:text="280" />
+                        <TextView
+                            android:id="@+id/r_y_last_alarm"
+                            android:padding="5dp"
+                            android:text="10/1/19 @ 10:12 AM" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#fff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/r_b_phase"
+                            android:padding="5dp"
+                            android:text="B-Phase" />
+
+                        <TextView
+                            android:id="@+id/r_b_location"
+                            android:padding="5dp"
+                            android:text="Name As Given" />
+
+                        <TextView
+                            android:id="@+id/r_b_present_value"
+                            android:padding="5dp"
+                            android:text="14.8" />
+
+                        <TextView
+                            android:id="@+id/r_b_avg_value"
+                            android:padding="5dp"
+                            android:text="122.6" />
+
+                        <TextView
+                            android:id="@+id/r_b_max_value"
+                            android:padding="5dp"
+                            android:text="236.8" />
+
+                        <TextView
+                            android:id="@+id/r_b_fire_alarm"
+                            android:padding="5dp"
+                            android:text="280" />
+                        <TextView
+                            android:id="@+id/r_b_last_alarm"
+                            android:padding="5dp"
+                            android:text="10/1/19 @ 10:12 AM" />
+
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

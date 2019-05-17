@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">hesmb</string>
+
+    <string name="text_sign_in">Login</string>
+    <string name="text_sign_in_subtitle">Selamat datang, \nsilahkan masuk untuk melanjutkan</string>
+    <string name="text_hint_email_field">Email</string>
+    <string name="text_hint_password_field">Password</string>
+    <string name="text_btn_forgot_password">Forgot Password</string>
+    <string name="text_btn_sign_in">Login</string>
+    <string name="text_btn_submit_otp">Submit</string>
+    <string name="text_hint_otp_field">Enter OTP</string>
+    <string name="text_not_have_an_account">Belum memiliki akun? <b><font color='#039BE5'>Daftar</font></b></string>
+    <string name="text_sign_up_subtitle">Selamat datang, \nbergabunglah bersama kami</string>
+    <string name="text_sign_up_title">Daftar</string>
+    <string name="text_hint_confirm_password_field">Konfirmasi kata sandi</string>
+    <string name="text_privacy_and_policy">Dengan mendaftar Anda berarti menyetujui\n<b><font color='#039BE5'>Kebijakan</font></b> dan <b><font color='#039BE5'>Privasi</font></b></string>
+    <string name="text_btn_sign_up">Daftar</string>
+    <string name="text_have_an_account">Sudah memiliki akun? <b><font color='#039BE5'>Masuk</font></b></string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="Tilte_name">P&amp;H NET-APP SOLUTIONS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="speedTestRangeValues">
+        <item>0</item>
+        <item>40</item>
+        <item>80</item>
+        <item>120</item>
+        <item>160</item>
+        <item>200</item>
+        <item>240</item>
+        <item>280</item>
+        <item>320</item>
+
+    </string-array>
+
+</resources>

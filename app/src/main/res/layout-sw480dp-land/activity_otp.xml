@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    >
+
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Verify Mobile Number"
+            android:textColor="#fff"/>
+
+        <EditText
+            android:inputType="phone"
+            android:id="@+id/user_mobile_number"
+            android:layout_marginStart="@dimen/margin_auth"
+            android:layout_marginEnd="@dimen/margin_auth"
+            android:layout_marginTop="@dimen/margin_default"
+            android:background="@drawable/bg_auth_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_body_size"
+            android:textColorHint="@color/colorSecondaryText"
+            android:hint="Enter Mobile Number"
+            android:padding="@dimen/padding_field"
+            android:drawablePadding="@dimen/padding_field"/>
+
+
+
+
+
+        <Button
+            android:id="@+id/user_btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_auth"
+            android:layout_marginTop="@dimen/margin_auth"
+            android:layout_marginEnd="@dimen/margin_auth"
+            android:background="@drawable/bg_auth_btn"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="Next"
+            android:textColor="@color/colorTextORIcon"
+            android:textSize="@dimen/text_btn_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+        <EditText
+            android:inputType="number"
+            android:id="@+id/user_otp"
+            android:visibility="invisible"
+            android:layout_marginStart="@dimen/margin_auth"
+            android:layout_marginEnd="@dimen/margin_auth"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_auth_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_body_size"
+            android:textColorHint="@color/colorSecondaryText"
+            android:hint="@string/text_hint_otp_field"
+            android:padding="@dimen/padding_field"
+            android:drawablePadding="@dimen/padding_field"
+            />
+
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/user_btn_submit_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_auth"
+            android:layout_marginTop="@dimen/margin_auth"
+            android:layout_marginEnd="@dimen/margin_auth"
+            android:background="@drawable/bg_auth_btn"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="@string/text_btn_submit_otp"
+            android:textColor="@color/colorTextORIcon"
+            android:textSize="@dimen/text_btn_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <ProgressBar
+            android:layout_marginTop="20dp"
+            android:visibility="invisible"
+            android:id="@+id/loginprogressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
