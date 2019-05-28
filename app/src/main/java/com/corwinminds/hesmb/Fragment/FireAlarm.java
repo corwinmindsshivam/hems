@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -36,8 +37,9 @@ import java.util.Random;
  * A simple {@link Fragment} subclass.
  */
 public class FireAlarm extends Fragment {
-    TextView FireLimit;
+    TextView FireLimit,table_r_value,table_y_value,table_b_value;
     ImageView alertr,alerty,alertb,rt,yt,bt;
+
     int r=0,r1=0,r2=0;
     private SpeedometerGauge rphase,yphase,bphase ;
     public FireAlarm() {
@@ -63,10 +65,17 @@ public class FireAlarm extends Fragment {
         rt=view.findViewById(R.id.r);
         yt=view.findViewById(R.id.y);
         bt=view.findViewById(R.id.b);
+        table_r_value=view.findViewById(R.id.r_r_fire_alarm);
+        table_y_value=view.findViewById(R.id.r_y_fire_alarm);
+        table_b_value=view.findViewById(R.id.r_b_fire_alarm);
+        table_r_value.setText(firelist);
+        table_y_value.setText(firelist);
+        table_b_value.setText(firelist);
         FireLimit.setText(firelist);
-        rphase.setLabelTextSize(20);
-        yphase.setLabelTextSize(20);
-        bphase.setLabelTextSize(20);
+
+        rphase.setLabelTextSize(30);
+        yphase.setLabelTextSize(30);
+        bphase.setLabelTextSize(30);
         rphase.setLabelConverter(new SpeedometerGauge.LabelConverter() {
             @Override
             public String getLabelFor(double progress, double maxProgress) {
@@ -76,13 +85,14 @@ public class FireAlarm extends Fragment {
 
         // configure value range and ticks
         rphase.setMaxSpeed(300);
-        rphase.setMajorTickStep(40);
+        rphase.setMajorTickStep(50);
         rphase.setMinorTicks(2);
 
         // Configure value range colors
         rphase.addColoredRange(30, 140, Color.GREEN);
         rphase.addColoredRange(140, 180, Color.YELLOW);
-        rphase.addColoredRange(Double.parseDouble(firelist), 300, Color.RED);
+        rphase.addColoredRange(Double.parseDouble(firelist), 300,Color.RED);
+
 
 
 
@@ -95,12 +105,11 @@ public class FireAlarm extends Fragment {
 
         // configure value range and ticks
         yphase.setMaxSpeed(300);
-        yphase.setMajorTickStep(40);
+        yphase.setMajorTickStep(50);
         yphase.setMinorTicks(2);
-
         // Configure value range colors
         yphase.addColoredRange(30, 140, Color.GREEN);
-        yphase.addColoredRange(140,180, Color.YELLOW);
+        yphase.addColoredRange(140, 180, Color.YELLOW);
         yphase.addColoredRange(Double.parseDouble(firelist), 300, Color.RED);
 
 
@@ -113,12 +122,12 @@ public class FireAlarm extends Fragment {
 
         // configure value range and ticks
         bphase.setMaxSpeed(300);
-        bphase.setMajorTickStep(40);
+        bphase.setMajorTickStep(50);
         bphase.setMinorTicks(2);
 
         // Configure value range colors
         bphase.addColoredRange(30, 140, Color.GREEN);
-        bphase.addColoredRange(140, 180, Color.YELLOW);
+        bphase.addColoredRange(140,  180, Color.YELLOW);
         bphase.addColoredRange(Double.parseDouble(firelist), 300, Color.RED);
 
 

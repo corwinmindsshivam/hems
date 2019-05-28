@@ -93,7 +93,7 @@
 
             <com.cardiomood.android.controls.gauge.SpeedometerGauge
                 android:id="@+id/rphase"
-                android:layout_width="130dp"
+                android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_centerInParent="true"
                 android:layout_margin="12dp"
@@ -166,7 +166,7 @@
 
             <com.cardiomood.android.controls.gauge.SpeedometerGauge
                 android:id="@+id/yphase"
-                android:layout_width="130dp"
+                android:layout_width="150dp"
                 android:layout_height="150dp" android:layout_margin="12dp"
                 />
 
@@ -233,7 +233,7 @@
 
             <com.cardiomood.android.controls.gauge.SpeedometerGauge
                 android:id="@+id/bphase"
-                android:layout_width="130dp"
+                android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_centerInParent="true"
                 android:layout_margin="12dp"

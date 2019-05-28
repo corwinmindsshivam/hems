@@ -20,6 +20,7 @@
         android:id="@+id/speedometer" />
 
         <TextView
+            android:id="@+id/todayDateMonth"
             android:background="@color/white"
             android:textStyle="bold"
             android:textSize="30sp"

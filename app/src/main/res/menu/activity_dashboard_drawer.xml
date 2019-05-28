@@ -13,6 +13,10 @@
             android:icon="@drawable/ic_dashboard_black_24dp"
             android:title="Energy" />
         <item
+            android:id="@+id/energyusage"
+            android:icon="@drawable/ic_data_usage_black_24dp"
+            android:title="Energy Usages" />
+        <item
             android:id="@+id/modules"
             android:icon="@drawable/ic_view_module_black_24dp"
             android:title="Readings" />

@@ -16,12 +16,16 @@ import android.widget.TextView;
 import com.cardiomood.android.controls.gauge.SpeedometerGauge;
 import com.corwinminds.hesmb.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * A simple {@link Fragment} subclass.
  */
 public class WeekFragment extends Fragment {
     private SpeedometerGauge speedometer;
-
+TextView todayDateWeek;
+String strDate;
     public WeekFragment() {
         // Required empty public constructor
     }
@@ -32,6 +36,7 @@ public class WeekFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_week, container, false);
+todayDateWeek=view.findViewById(R.id.todayDateWeek);
         speedometer = (SpeedometerGauge)view.findViewById(R.id.speedometer);
         speedometer.setLabelTextSize(20);
         // Add label converter
@@ -52,6 +57,11 @@ public class WeekFragment extends Fragment {
         speedometer.addColoredRange(140, 180, Color.YELLOW);
         speedometer.addColoredRange(180, 300, Color.RED);
         speedometer.setSpeed(78);
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd MMMM yyyy");
+        strDate = formatter.format(date);
+        todayDateWeek.setText(strDate);
+        System.out.println("Date Format with dd MMMM yyyy : "+strDate);
         return view;
 
     }

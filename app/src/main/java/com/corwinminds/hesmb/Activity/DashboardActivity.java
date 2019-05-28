@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.corwinminds.hesmb.Fragment.EnergyDashboard;
+import com.corwinminds.hesmb.Fragment.EnergyUsageFragment;
 import com.corwinminds.hesmb.Fragment.FireAlarm;
 import com.corwinminds.hesmb.Fragment.ReadingFragment;
 
@@ -104,9 +105,12 @@ public class DashboardActivity extends AppCompatActivity
         else if (id == R.id.setting) {
             selectedFragment = new MySettingsFragment();
         }
-        /*else if (id == R.id.dashboard) {
+        else if (id == R.id.energyusage) {
+            selectedFragment= EnergyUsageFragment.newInstance();
+
+            }
             //selectedFragment = DashboardFragment.newInstance();
-        } else if (id == R.id.modules) {
+        /* else if (id == R.id.modules) {
             //selectedFragment = ModulesFragment.newInstance();
         } else if (id == R.id.profile) {
             //selectedFragment = ProfileFragment.newInstance();

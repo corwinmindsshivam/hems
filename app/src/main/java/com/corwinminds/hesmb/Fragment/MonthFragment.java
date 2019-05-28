@@ -17,9 +17,13 @@ import android.widget.TextView;
 import com.cardiomood.android.controls.gauge.SpeedometerGauge;
 import com.corwinminds.hesmb.R;
 
-public class MonthFragment extends Fragment {
-    private SpeedometerGauge speedometer;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
+    public class MonthFragment extends Fragment {
+    private SpeedometerGauge speedometer;
+        TextView todayDateMonth;
+String strDate;
     public MonthFragment() {
         // Required empty public constructor
     }
@@ -30,6 +34,7 @@ public class MonthFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_month, container, false);
+        todayDateMonth=view.findViewById(R.id.todayDateMonth);
         speedometer = (SpeedometerGauge)view.findViewById(R.id.speedometer);
         speedometer.setLabelTextSize(20);
         // Add label converter
@@ -51,6 +56,11 @@ public class MonthFragment extends Fragment {
         speedometer.addColoredRange(140, 180, Color.YELLOW);
         speedometer.addColoredRange(180, 300, Color.RED);
         speedometer.setSpeed(260);
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd MMMM yyyy");
+        strDate = formatter.format(date);
+        todayDateMonth.setText(strDate);
+        System.out.println("Date Format with dd MMMM yyyy : "+strDate);
         return view;
 
     }
